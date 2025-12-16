@@ -10,22 +10,33 @@
 <header class="header">
    <div class="container">
       <nav class="nav">
-        <a class="nav__link nav__link--logo"> 
+        <a class="nav__link nav__link--logo nav__link--current"> 
         <img src="img/icon.png" alt="иконка."> 
         </a>
        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link nav__link--current">Главная</a>
+            </li>
         <li class="nav__item">
             <a class="nav__link" href="#facts">Интересные факты</a>
         </li>
          <li class="nav__item">
             <a class="nav__link" href="#updates">Обновления</a>
+         </li>
         <li class="nav__item">
             <a class="nav__link" href="#fandom">Фандом</a>
+        </li>
         <li class="nav__item">
             <a class="nav__link" href="#music">Саундтреки</a>
+        </li>
         <li class="nav__item">
             <a class="nav__link" href="#trailer">Трейлер</a>
         </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#facts">Интересные факты</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="contacts.html">Контакты</a>
         </li>
        </ul> 
     </nav>
@@ -37,13 +48,13 @@
         <div class="container">
  <h1 class="visually-hidden">Фан сайт об игре "Hollow Knight"</h1>
     <img class="logo" src="img/Hub-Image.png" alt="логотип.">
-        <p>Hollow Knight (с англ. — «Полый Рыцарь») — компьютерная игра в жанре метроидвания,
-        <br>разработанная и выпущенная австралийской инди-студией Team Cherry 24 февраля 2017 года для Windows.</p>
-    <img src="img/main-picture.jpeg" alt="персонаж игры." width="800" height="500">
+        <!-- <p>Hollow Knight (с англ. — «Полый Рыцарь») — компьютерная игра в жанре метроидвания,
+        <br>разработанная и выпущенная австралийской инди-студией Team Cherry 24 февраля 2017 года для Windows.</p> -->
+    <img class="main__logo" src="img/main-picture.jpeg" alt="персонаж игры." width="800" height="500">
         
         <p>Независимая креативная студия из Австралии представила уникальное авторское творение – игру 
         под названием «Hollow Knight». Герой оказывается в небольшом отмирающем городке, назван 
-        который Дертомаутом, странным образом он оказывается под его глубинами в пугающих и
+        который Дертомаутом, странным образом он оказывается под его глубинами в пугающих и 
         неизведанных катакомбах. Здесь его на каждом шагу подстерегают жуткие враги, неожиданные
         ловушки и давние секреты, разгадать которые предстоит именно ему.</p>
 
@@ -60,7 +71,7 @@
             <img src="img/Facts.jpg" alt="главный персонаж.">
             <div class="aboutfacts">
                 <h2>Интересные факты:</h2>
-                <ul class="facts__list">  
+                 <ul class="facts__list">  
                     <li><p>Год выхода игры: 2017 год </p> </li>
                     <li><p>Платформы: Windows, Nintendo Switch, Xbox One, PlayStation 4, Linux, MacOS</p> </li>
                     <li><p>Режим: Однопользовательская игра</p> </li>
@@ -68,9 +79,9 @@
                     <li><p>Дизайнер: Ари Гибсон</p> </li>
                     <li><p>Музыкальная составляющая: Кристофер Ларкин</p> </li>
                     <li><p>Жанр: Метроидвания </p> </li>
+                </ul> 
             </div>
-         </ul> 
-         </div>
+        </div>
     </section>
      
 
@@ -107,14 +118,14 @@
         </div>
     </section>
 
-    <section class="fandom" id="fandom">
+<section class="fandom" id="fandom">
         <div class="container fandom__container">
             <img src="img/0668e22d936c315fbe69fe7e3a4414a0.jpg" alt="логотип игры с персонажем." width="550" height="auto">
             <div class="aboutfandom">
                  <h2>Фандом</h2>
-                <p>Эта вики — объединение сообщества фанатов, где каждый может принять участие в проекте и внести свой вклад в развитие. 
+                <p>Википедия фандома "Hollow Knight". Эта вики — объединение сообщества фанатов, где каждый может принять участие в проекте и внести свой вклад в развитие. 
             Не бойтесь проявить себя и тем более попросить помощи в начинании — здесь рады каждому</p>
-              <a class="fandomlink" href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki" target="_blank"> Hollow Knight Wiki 
+              <a class="button" href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki" target="_blank"> Hollow Knight Wiki 
               </a>
               </div>
        </div>
@@ -126,7 +137,7 @@
               <h2>Завораживающая оркестровая работа</h2>
               <p>Эпическая музыка Hollow Knight, написанная и спродюсированная Кристофером Ларкином, пронизывает всю игру, 
                 отражая печаль о величественной цивилизации, доведенной до руин.</p>
-        <a class="music__button" href="https://christopherlarkin.bandcamp.com/album/hollow-knight-original-soundtrack" target="_blank">Официальные саундтреки
+        <a class="button" href="https://christopherlarkin.bandcamp.com/album/hollow-knight-original-soundtrack" target="_blank">Официальные саундтреки
         </a>
          </div>
         <img src="img/albums.webp" alt="обложка саунтреков.">
@@ -148,22 +159,22 @@
     <img src="img/team_cherry_logo_big_white.png" alt="логотип создателей игры." width="450" height="361"> 
     <p></p>
     <ul class="stuff__list">
-    <li class="stuff__item">
-    <img src="img/ari_gibson.webp" alt="Ари Гибсон.">
+        <li class="stuff__item">
+            <img src="img/ari_gibson.webp" alt="Ари Гибсон.">
     <h3>Ари Гибсон</h3>
-     <p>Ари отвечает за дизайн игры вместе с Уильямом. Он создает игровое оформление, окружение и анимирует сотни багов.</p>
+        <p>Ари отвечает за дизайн игры вместе с Уильямом. Он создает игровое оформление, окружение и анимирует сотни багов.</p>
     </li>
-      <li class="stuff__item">
-    <img src="img/william_pellen.webp" alt="Уильям Пеллен.">
+        <li class="stuff__item">
+            <img src="img/william_pellen.webp" alt="Уильям Пеллен.">
     <h3>Уильям Пеллен</h3>
-   <p>Уильям разрабатывает игру вместе с Ари. Он создает врага, босса и игровое поведение для Hollow Knight. 
+        <p>Уильям разрабатывает игру вместе с Ари. Он создает врага, босса и игровое поведение для Hollow Knight. 
     Если враг кажется вам слишком сложным или непреодолимым препятствием, вините его!</p> 
     </li>
-  <li class="stuff__item">
-    <img src="img/david_kazi.webp" alt="Дэвид Кази.">
+    <li class="stuff__item">
+            <img src="img/david_kazi.webp" alt="Дэвид Кази.">
     <h3>Дэвид Кази</h3>
-    <p>Дэйв отвечал за техническое руководство Hollow Knight.
-    Он делил свое время между запуском игры и исправлением того, что сломали Ари и Уильям.</p>
+        <p>Дэйв отвечал за техническое руководство Hollow Knight.
+        Он делил свое время между запуском игры и исправлением того, что сломали Ари и Уильям.</p>
     </li>
     </ul>
    </div>
@@ -183,10 +194,11 @@
                </a>
         </li>
         <li class="footer__item">
-              <a class="footer__link"><svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.6 0H3.18C1.31 0 0 1.6 0 3.4v10.1C0 15.4 1.31 17 3.17 17h15.66c1.64 0 3.17-1.6 3.17-3.4V3.4C21.78 1.6 20.47 0 18.6 0ZM7.67 12.54V4.46L15 8.5l-7.33 4.04Z" fill="#fff"/></svg>
+              <a class="footer__link" href="https://www.youtube.com/channel/UCZS2K8ZsUmujTuj3cNMyBSA" aria-label="Ссылка на ютуб канал."><svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.6 0H3.18C1.31 0 0 1.6 0 3.4v10.1C0 15.4 1.31 17 3.17 17h15.66c1.64 0 3.17-1.6 3.17-3.4V3.4C21.78 1.6 20.47 0 18.6 0ZM7.67 12.54V4.46L15 8.5l-7.33 4.04Z"></svg>
             </a>
         </li>
     </ul>
         <p>Hollow Knight is © Copyright 2025 Team Cherry</p>  
     </div>
+    
 </footer>

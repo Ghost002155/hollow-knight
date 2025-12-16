@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 *,
@@ -21,6 +20,7 @@ html {
 
 img {
     display: block;
+    max-width: 100%;
     height: auto;
     border-radius: 15px;
 }
@@ -39,6 +39,49 @@ a {
     max-width: 1440px;
     margin: 0 auto; 
     padding: 0 40px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.button {
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 15px;
+    width: 270px;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 10px; 
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer,
+.header {
+    flex-shrink: 0;
 }
 
 .visually-hidden { 
@@ -63,26 +106,52 @@ a {
 .nav__list { 
     display: flex;
     flex-wrap: wrap;
-    gap: 90px;
+    width: 100%;
     list-style-type: none;
     margin: 0 auto;
-    margin-left: 200px;
+    margin-left: 80px;
     padding: 0;
     justify-content: space-between;
 }
 
 .nav__link {
+    position: relative;
     color: #ffffff;
     text-transform: uppercase;
     transition: all 0.5s ease;
 }
 
+.nav__link::before {
+    content: "";
+    position: absolute; 
+    right: 0;
+    left: 50%;
+    bottom: -5px;
+    background-color: #ffffff;
+    width: 0;
+    height: 1.5px;
+    transform: translate(-50%, -50%);  
+}
+
 .nav__link:hover {
     opacity: 0.7; 
-    border-bottom: 1px solid #ffffff;
+    /* border-bottom: 1px solid #ffffff; */
+}
+
+.nav__link:hover::before {
+    width: 100%;
 }
 
 .nav__link--logo:hover {
+    border-bottom: none;
+}
+
+.nav__link--current {
+    color: rgb(168, 168, 168);
+}
+
+.nav__link--current:hover {
+    opacity: 1;
     border-bottom: none;
 }
 
@@ -90,9 +159,18 @@ a {
     padding: 30px;
 }
 
+.logo {
+    margin: 0 auto;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
 .intro {
-    
     margin-bottom: 70px;
+}
+
+.main__logo {
+    margin-bottom: 30px;
 }
 
 .intro p {
@@ -132,12 +210,6 @@ a {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-
-.logo {
-    margin: 0 auto;
-    width: 500px;
 }
 
 .linkdownload:hover {
@@ -187,7 +259,7 @@ a {
     object-fit: contain;
     display: block;
     height: auto;
-    width: 550px;
+    width: 560px;
     margin: 0;
     margin-bottom: 40px;
     position: static;
@@ -213,26 +285,15 @@ a {
     margin-bottom: 50px;
 }
 
-.fandomlink {
-    display: block;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px 15px;
-    width: 270px;
-    text-align: center;
-    transition: all 0.5s;
-    border-radius: 10px; 
-}
-
 .fandomlink:hover {
-    opacity: 0.7; 
+     transform: scale(1.1);
 }
 
 .music img {
     object-fit: contain;
     display: block;
     height: auto;
-    width: 530px;
+    width: 550px;
     display: flex;
     margin: 0;
     margin-bottom: 50px;
@@ -253,19 +314,9 @@ a {
     justify-content: space-between;
 }
 
-.music__button {
-    display: block;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px 15px;
-    width: 250px;
-    text-align: center;
-    transition: all 0.5s;
-    border-radius: 10px;
-}
-
 .music__button:hover {
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    transform: scale(1.1);
 }
 
 .music h2 {
@@ -307,8 +358,8 @@ a {
 .stuff__list {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-    padding: 130px;
+    gap: 30px;
+    padding: 120px;
     list-style-type: none;
     margin: 0;
 }
@@ -339,6 +390,20 @@ a {
      margin: 0;
 }
 
+.contacts {
+    padding-bottom: 40px;
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contacts__item p:first-child {
+    font-weight: 900;
+}
+
 .footer__list {
     list-style-type: none;
     margin: 0 auto;
@@ -355,6 +420,15 @@ a {
     align-items: center;
     width: 40px;
     height: 40px;
+    transition: all 0.7s;
+}
+
+.footer__link svg {
+    fill: #ffffff;
+}
+
+.footer__link:hover {
+    transform: scale(1.4);
 }
 
 footer {
@@ -366,3 +440,79 @@ footer {
 .footer__item svg {
     width: 30px;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form input {
+    text-align: center;
+    padding: 10px;
+    width: 60%;
+}
+
+.form__checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    gap: 9px;
+}
+
+.form__checkboxmark {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 4px
+}
+
+.form__checkboxmark::before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 8px;
+    background-image: url("img/svg/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.button__radiomark {
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.button__radiomark::before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color:#000000;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + .button__radiomark::before {
+    display: block;
+}
+
+.form__checkbox input:checked + .form__checkboxmark::before {
+    display: block;
+}
+
